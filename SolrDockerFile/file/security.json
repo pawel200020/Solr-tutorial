@@ -1,0 +1,59 @@
+{
+  "authentication":{
+    "blockUnknown":true,
+    "class":"solr.BasicAuthPlugin",
+    "credentials":{
+      "solr":"IV0EHq1OnNrj6gvRCwvFwTrZ1+z1oBbnQdiVC3otuq0= Ndd7LKvVBAaZIF0QAVi1ekCfAJXr1GGfLtRUXhgrF8c=",
+      "LimitedCred":"IV0EHq1OnNrj6gvRCwvFwTrZ1+z1oBbnQdiVC3otuq0= Ndd7LKvVBAaZIF0QAVi1ekCfAJXr1GGfLtRUXhgrF8c="},
+    "realm":"My Solr users",
+    "forwardCredentials":false},
+  "authorization":{
+    "class":"solr.RuleBasedAuthorizationPlugin",
+    "permissions":[
+      {
+        "name":"security-edit",
+        "role":"adminRole"},
+      {
+        "name":"security-read",
+        "role":"adminRole"},
+      {
+        "name":"schema-edit",
+        "role":"adminRole"},
+      {
+        "name":"schema-read",
+        "role":"collectionRole"},
+      {
+        "name":"config-edit",
+        "role":"adminRole"},
+      {
+        "name":"config-read",
+        "role":"collectionRole"},
+      {
+        "name":"collection-admin-edit",
+        "role":"adminRole"},
+      {
+        "name":"collection-admin-read",
+        "role":"collectionRole"},
+      {
+        "name":"update",
+        "role":"dataImportRole"},
+      {
+        "name":"read",
+        "role":"dataReaderRole"},
+      {
+	"name":"admin-ui",
+        "path":"/",
+        "role":"adminRole"}
+      
+		],
+    "user-role":{
+      "solr":[
+        "adminRole",
+        "collectionRole",
+        "dataImportRole",
+	"dataReaderRole"],     
+      "LimitedCred":[
+        "collectionRole",
+        "dataImportRole",
+	"dataReaderRole"]
+      }}}
