@@ -1,0 +1,84 @@
+{
+    "add-field": {
+        "name": "creation_date",
+        "type": "pdate",
+        "stored": true,
+        "indexed": true,
+        "docValues": true
+    },
+    "add-field": {
+        "name": "created_by",
+        "type": "string",
+        "stored": true,
+        "indexed": true,
+        "required": true
+    },
+    "add-field": {
+        "name": "order_description",
+        "type": "text_en",
+        "stored": true,
+        "indexed": true
+    },
+    "add-field": {
+        "name": "order_cost",
+        "type": "pdouble",
+        "stored": true,
+        "indexed": true,
+        "docValues": true
+    },
+    "add-field": {
+        "name": "products",
+        "type": "text_en",
+        "stored": true,
+        "indexed": true,
+        "multiValued": true
+    },
+    "add-dynamic-field": {
+        "name": "*_extraInfo",
+        "type": "text_en",
+        "stored": true,
+        "indexed": false
+    },
+    "add-field": {
+        "name": "address_line_1",
+        "type": "string",
+        "stored": true,
+        "indexed": false
+    },
+    "add-field": {
+        "name": "address_line_2",
+        "type": "text_en",
+        "stored": true,
+        "indexed": false
+    },
+    "add-field": {
+        "name": "signature",
+        "type": "string",
+        "stored": true,
+        "indexed": true,
+        "multiValued": true
+    },
+    "add-field": {
+        "name": "order_details",
+        "type": "text_en",
+        "stored": true,
+        "indexed": true,
+        "multiValued": true
+    },
+    "add-copy-field": {
+        "source": "signature",
+        "dest": "order_details"
+    },
+    "add-copy-field": {
+        "source": "address_line_1",
+        "dest": "order_details"
+    },
+    "add-copy-field": {
+        "source": "address_line_2",
+        "dest": "order_details"
+    },
+    "add-copy-field": {
+        "source": "order_cost",
+        "dest": "order_details"
+    }
+}
