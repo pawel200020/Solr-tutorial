@@ -1,4 +1,4 @@
-{
+
     {
         "created_by": "Jonh Smith",
         "id": "1",
@@ -23,5 +23,16 @@
         "address_line_2": "11:111 Bydgoszcz",
         "signature": "NOW/PR02/2024",
         "order_details": "ready"
+    }, {
+        "created_by": "Michal Mucha",
+        "id": "3",
+        "creation_date": "2015-11-01T07:00:00Z",
+        "order_description": "bad stuff",
+        "order_cost": 22.56,
+        "products": ["Broken shoe"],
+        "client_extraInfo": "slowly",
+        "address_line_1": "Norymbersk 11",
+        "address_line_2": "11:999 Szczecin",
+        "signature": "NOW/PR03/2024",
+        "order_details": "new"
     }
-}
