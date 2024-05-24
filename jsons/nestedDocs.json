@@ -7,3 +7,10 @@ address_line_2: 234 * or address_line_1: 234 *
     fl:
     *
     , [child childFilter = "address_line_2:234* OR address_line_2:234* "]
+
+
+
+({!edismax qf = 'address_line_1 address_line_2 note'
+    v = +234 }) | ({!parent which = ': -_nest_path_:*'
+    score = total } {!edismax qf = 'name'
+    v = +Bill }) a
